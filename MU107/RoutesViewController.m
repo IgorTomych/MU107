@@ -9,15 +9,14 @@
 #import "RoutesViewController.h"
 #import "Route.h"
 
-#import <AFNetworking.h>
 #import <MBProgressHUD.h>
 #import "MapViewController.h"
-
+#import "MarshrutkiApi.h"
 
 
 @interface RoutesViewController ()
 
-@property (strong, nonatomic) NSMutableArray* routes;
+@property (strong, nonatomic) NSArray* routes;
 
 @end
 
@@ -26,30 +25,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    
-    
-    [MBProgressHUD showHUDAddedTo:self.tableView animated:YES];
-    
-    [manager GET:@"http://marshrutki.com.ua/mu/routes.php" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSArray* rawRoutes = (NSArray*) responseObject;
-        
-        self.routes = [[NSMutableArray alloc] init];
-        
-        for (NSDictionary* attributes in rawRoutes) {
-            [self.routes addObject:[Route initRouteWithDictionary:attributes]];
-        }
-    
-        [MBProgressHUD hideAllHUDsForView:self.tableView animated:YES];
-        [self.tableView reloadData];
-        
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
-        [MBProgressHUD hideAllHUDsForView:self.tableView animated:YES];
-        
-        NSLog(@"Error: %@", error);
-    }];
+    [[MarshrutkiApi sharedClient] getRoutes:^(NSArray *routes, NSError *error) {
+        self.routes = routes;
+        [self.tableView reloadData];
+    } params:nil];
 }
 
 - (void)didReceiveMemoryWarning

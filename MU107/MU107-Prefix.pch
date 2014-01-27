@@ -17,4 +17,4 @@
 
 #endif
 
-#define MYDEFINEDSTRING @"MyString"
+#import "Config.h"
