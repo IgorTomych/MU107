@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MapViewController : UIViewController
+@class Route;
 
+@interface MapViewController : UIViewController
+- (void)selectRoute:(Route *)selectedRoute;
 @end

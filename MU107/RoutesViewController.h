@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <JASidePanelController.h>
+#import <UIViewController+JASidePanel.h>
+
+
+@class MapViewController;
 
 @interface RoutesViewController : UITableViewController
 
+@property (strong, nonatomic) MapViewController* mapController;
 @end

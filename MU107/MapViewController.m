@@ -8,8 +8,10 @@
 
 #import "MapViewController.h"
 #import "LoginViewController.h"
+#import "Route.h"
 
 @interface MapViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *routeTitle;
 
 @end
 
@@ -30,8 +32,13 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (IBAction)longPressAction:(id)sender {
     NSLog(@"long press");
+}
+
+-(void)selectRoute:(Route *)selectedRoute {
+    self.routeTitle.text = selectedRoute.title;
 }
 
 @end

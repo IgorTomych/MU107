@@ -11,6 +11,7 @@
 
 #import <AFNetworking.h>
 #import <MBProgressHUD.h>
+#import "MapViewController.h"
 
 
 
@@ -76,6 +77,16 @@
     return cell;
 }
 
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    Route* route = (Route*)self.routes[indexPath.row];
+    
+    [self.mapController selectRoute:route];
+    JASidePanelController* sideController = self.sidePanelController;
+    
+    [sideController showCenterPanelAnimated:YES];
+}
 
 
 
