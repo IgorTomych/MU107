@@ -10,10 +10,16 @@
 #import <JASidePanelController.h>
 #import <UIViewController+JASidePanel.h>
 
+@class MapViewController, Route;
 
-@class MapViewController;
+@protocol RoutesMenuProtocol <NSObject>
+- (void)didSelectRoute:(Route*)route;
+@end
+
+
 
 @interface RoutesViewController : UITableViewController
+@property (weak, nonatomic) id<RoutesMenuProtocol> delegate;
 
-@property (strong, nonatomic) MapViewController* mapController;
+//@property (strong, nonatomic) MapViewController* mapController;
 @end

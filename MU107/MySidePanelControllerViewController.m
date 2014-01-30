@@ -23,7 +23,7 @@
     
     MapViewController* mapViewController = (MapViewController*)[navigationController topViewController];
     RoutesViewController* routesViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftViewController"];
-    routesViewController.mapController = mapViewController;
+    routesViewController.delegate = mapViewController;
     
     [self setLeftPanel:routesViewController];
     [self setCenterPanel:navigationController];

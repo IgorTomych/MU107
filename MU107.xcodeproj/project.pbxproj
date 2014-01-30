@@ -22,6 +22,7 @@
 		7412D5EA188858AA0049A55C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7412D5E8188858AA0049A55C /* InfoPlist.strings */; };
 		7412D5EC188858AA0049A55C /* MU107Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412D5EB188858AA0049A55C /* MU107Tests.m */; };
 		7412D5F818885C390049A55C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412D5F718885C390049A55C /* User.m */; };
+		746B9A4F189AC23600CF529F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746B9A4E189AC23600CF529F /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7474E232189181F900066DFA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474E231189181F900066DFA /* MapViewController.m */; };
 		7474E2351891863C00066DFA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474E2341891863C00066DFA /* RegisterViewController.m */; };
 		7474E24018918D1300066DFA /* MySidePanelControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474E23F18918D1300066DFA /* MySidePanelControllerViewController.m */; };
@@ -64,6 +65,7 @@
 		7412D5EB188858AA0049A55C /* MU107Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MU107Tests.m; sourceTree = "<group>"; };
 		7412D5F618885C390049A55C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
 		7412D5F718885C390049A55C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		746B9A4E189AC23600CF529F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7474E230189181F900066DFA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7474E231189181F900066DFA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		7474E2331891863C00066DFA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				746B9A4F189AC23600CF529F /* MapKit.framework in Frameworks */,
 				7412D5C3188858AA0049A55C /* CoreGraphics.framework in Frameworks */,
 				7412D5C5188858AA0049A55C /* UIKit.framework in Frameworks */,
 				7412D5C1188858AA0049A55C /* Foundation.framework in Frameworks */,
@@ -128,6 +131,7 @@
 		7412D5BF188858AA0049A55C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				746B9A4E189AC23600CF529F /* MapKit.framework */,
 				7412D5C0188858AA0049A55C /* Foundation.framework */,
 				7412D5C2188858AA0049A55C /* CoreGraphics.framework */,
 				7412D5C4188858AA0049A55C /* UIKit.framework */,
