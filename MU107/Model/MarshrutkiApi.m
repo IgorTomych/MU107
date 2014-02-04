@@ -17,9 +17,35 @@
     
     dispatch_once(&onceToken, ^{
         _sharedClient = [[MarshrutkiApi alloc] init];
+        
+        _sharedClient.objectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
+
+        NSString *storePath = [[_sharedClient applicationDocumentsDirectory] stringByAppendingPathComponent:@"Marshrutki.sqlite"];
+
+        _sharedClient.persistentStore = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:_sharedClient.objectModel];
+        
+        NSError *error;
+        
+        [_sharedClient.persistentStore addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:[NSURL fileURLWithPath:storePath] options:nil error:&error];
+        _sharedClient.context = [[NSManagedObjectContext alloc] init];
+        
+        _sharedClient.context.persistentStoreCoordinator = _sharedClient.persistentStore;
+        
+        Bus* busObject = [NSEntityDescription insertNewObjectForEntityForName:@"Bus" inManagedObjectContext:_sharedClient.context];
+        
+//        Route* testRoute = [NSEntityDescription insertNewObjectForEntityForName:@"Route" inManagedObjectContext:_sharedClient.context];
+        
+//        testRoute.name = @"Test Route";
+
+        [_sharedClient.context save:&error];
+        
     });
     
     return _sharedClient;
+}
+
+- (NSString *)applicationDocumentsDirectory {
+	return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 
 -(void)getRoutes:(void (^)(NSArray *, NSError *))block params:(NSDictionary *)params {
@@ -29,9 +55,9 @@
         
         NSMutableArray* routes = [[NSMutableArray alloc] init];
         
-        for (NSDictionary* attributes in rawRoutes) {
-            [routes addObject:[Route initRouteWithDictionary:attributes]];
-        }
+//        for (NSDictionary* attributes in rawRoutes) {
+//            [routes addObject:[Route initRouteWithDictionary:attributes]];
+//        }
         
         if (block != nil) {
             block(routes, nil);

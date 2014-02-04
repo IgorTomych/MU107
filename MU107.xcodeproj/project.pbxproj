@@ -22,13 +22,15 @@
 		7412D5EA188858AA0049A55C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7412D5E8188858AA0049A55C /* InfoPlist.strings */; };
 		7412D5EC188858AA0049A55C /* MU107Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412D5EB188858AA0049A55C /* MU107Tests.m */; };
 		7412D5F818885C390049A55C /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 7412D5F718885C390049A55C /* User.m */; };
+		744ADA6118A0175600EAFEEC /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 744ADA5F18A0175600EAFEEC /* Model.xcdatamodeld */; };
+		744ADA6A18A0189000EAFEEC /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 744ADA6918A0189000EAFEEC /* Route.m */; };
+		744ADA7018A018C800EAFEEC /* Bus.m in Sources */ = {isa = PBXBuildFile; fileRef = 744ADA6F18A018C800EAFEEC /* Bus.m */; };
 		746B9A4F189AC23600CF529F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 746B9A4E189AC23600CF529F /* MapKit.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		7474E232189181F900066DFA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474E231189181F900066DFA /* MapViewController.m */; };
 		7474E2351891863C00066DFA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474E2341891863C00066DFA /* RegisterViewController.m */; };
 		7474E24018918D1300066DFA /* MySidePanelControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7474E23F18918D1300066DFA /* MySidePanelControllerViewController.m */; };
 		749A51091896DE7C006ABECC /* MarshrutkiApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 749A51081896DE7C006ABECC /* MarshrutkiApi.m */; };
 		74ED309C189192A2000E0969 /* RoutesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ED309B189192A2000E0969 /* RoutesViewController.m */; };
-		74ED309F1891980D000E0969 /* Route.m in Sources */ = {isa = PBXBuildFile; fileRef = 74ED309E1891980D000E0969 /* Route.m */; };
 		92D0CE7C39BE47FFAA87DCCF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E15A63CA301E42A6911F3B7C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,12 @@
 		7412D5EB188858AA0049A55C /* MU107Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MU107Tests.m; sourceTree = "<group>"; };
 		7412D5F618885C390049A55C /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = Model/User.h; sourceTree = "<group>"; };
 		7412D5F718885C390049A55C /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = Model/User.m; sourceTree = "<group>"; };
+		744ADA6018A0175600EAFEEC /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		744ADA6818A0189000EAFEEC /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Route.h; sourceTree = "<group>"; };
+		744ADA6918A0189000EAFEEC /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Route.m; sourceTree = "<group>"; };
+		744ADA6E18A018C800EAFEEC /* Bus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bus.h; sourceTree = "<group>"; };
+		744ADA6F18A018C800EAFEEC /* Bus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bus.m; sourceTree = "<group>"; };
+		744ADA7118A01D3C00EAFEEC /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
 		746B9A4E189AC23600CF529F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7474E230189181F900066DFA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		7474E231189181F900066DFA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
@@ -77,8 +85,6 @@
 		749A510A1896E017006ABECC /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
 		74ED309A189192A2000E0969 /* RoutesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RoutesViewController.h; sourceTree = "<group>"; };
 		74ED309B189192A2000E0969 /* RoutesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RoutesViewController.m; sourceTree = "<group>"; };
-		74ED309D1891980D000E0969 /* Route.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Route.h; path = Model/Route.h; sourceTree = "<group>"; };
-		74ED309E1891980D000E0969 /* Route.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Route.m; path = Model/Route.m; sourceTree = "<group>"; };
 		E15A63CA301E42A6911F3B7C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -200,9 +206,12 @@
 				749A51081896DE7C006ABECC /* MarshrutkiApi.m */,
 				7412D5F618885C390049A55C /* User.h */,
 				7412D5F718885C390049A55C /* User.m */,
-				74ED309D1891980D000E0969 /* Route.h */,
-				74ED309E1891980D000E0969 /* Route.m */,
 				749A510A1896E017006ABECC /* Config.h */,
+				744ADA6E18A018C800EAFEEC /* Bus.h */,
+				744ADA6F18A018C800EAFEEC /* Bus.m */,
+				744ADA5F18A0175600EAFEEC /* Model.xcdatamodeld */,
+				744ADA6818A0189000EAFEEC /* Route.h */,
+				744ADA6918A0189000EAFEEC /* Route.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -343,11 +352,13 @@
 				7474E2351891863C00066DFA /* RegisterViewController.m in Sources */,
 				749A51091896DE7C006ABECC /* MarshrutkiApi.m in Sources */,
 				74ED309C189192A2000E0969 /* RoutesViewController.m in Sources */,
-				74ED309F1891980D000E0969 /* Route.m in Sources */,
+				744ADA6A18A0189000EAFEEC /* Route.m in Sources */,
 				7412D5D7188858AA0049A55C /* LoginViewController.m in Sources */,
+				744ADA7018A018C800EAFEEC /* Bus.m in Sources */,
 				7474E232189181F900066DFA /* MapViewController.m in Sources */,
 				7412D5D1188858AA0049A55C /* AppDelegate.m in Sources */,
 				7474E24018918D1300066DFA /* MySidePanelControllerViewController.m in Sources */,
+				744ADA6118A0175600EAFEEC /* Model.xcdatamodeld in Sources */,
 				7412D5CD188858AA0049A55C /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -571,6 +582,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		744ADA5F18A0175600EAFEEC /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				744ADA7118A01D3C00EAFEEC /* Model 2.xcdatamodel */,
+				744ADA6018A0175600EAFEEC /* Model.xcdatamodel */,
+			);
+			currentVersion = 744ADA6018A0175600EAFEEC /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7412D5B5188858AA0049A55C /* Project object */;
 }

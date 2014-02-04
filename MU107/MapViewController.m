@@ -44,7 +44,7 @@
 #pragma mark - RouteMenuProtocol
 
 -(void)didSelectRoute:(Route *)route {
-    self.title = route.title;
+//    self.title = route.title;
     
     self.currentRoute = route;
     

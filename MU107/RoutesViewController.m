@@ -73,8 +73,8 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:route.isFavorited?FavCellIdentifier:CellIdentifier forIndexPath:indexPath];
 
-    cell.textLabel.text = route.title;
-    cell.detailTextLabel.text = route.price;
+//    cell.textLabel.text = route.title;
+//    cell.detailTextLabel.text = route.price;
 
     return cell;
 }
