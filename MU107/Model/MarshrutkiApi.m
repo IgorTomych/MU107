@@ -55,9 +55,12 @@
         
         NSMutableArray* routes = [[NSMutableArray alloc] init];
         
-//        for (NSDictionary* attributes in rawRoutes) {
+        for (NSDictionary* attributes in rawRoutes) {
 //            [routes addObject:[Route initRouteWithDictionary:attributes]];
-//        }
+            
+            Route* routeObject = [NSEntityDescription insertNewObjectForEntityForName:@"Route" inManagedObjectContext:self.context];
+            routeObject.name = @"test";
+        }
         
         if (block != nil) {
             block(routes, nil);

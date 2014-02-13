@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 #import "RoutesViewController.h"
 
 @class Route;
 
-@interface MapViewController : UIViewController <RoutesMenuProtocol>
+@interface MapViewController : UIViewController <RoutesMenuProtocol, MKMapViewDelegate>
 - (void)selectRoute:(Route *)selectedRoute;
 @end

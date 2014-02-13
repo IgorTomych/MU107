@@ -18,6 +18,24 @@
     return YES;
 }
 
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    NSLog(@"%@", url);
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    if ([url.absoluteString hasPrefix:@"fb196659450519064"])
+    {
+        NSString *token = @"test_tocken";
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"FACEBOOKTOKEN" object:token];
+    }
+    
+    return YES;
+    
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
 }

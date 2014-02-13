@@ -10,6 +10,5 @@
 
 @interface LoginViewController : UIViewController
 
--(void)publicMethod;
 
 @end
